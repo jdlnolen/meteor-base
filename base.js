@@ -19,8 +19,8 @@ if (Meteor.isClient) {
 
 if (Meteor.isServer) {
   Meteor.startup(function () {
-    // code to run on server at startup
-  });
+    process.env.MAIL_URL = process.env.MAILGUN_TOTAL;});
+
 
   Meteor.methods({
     sendEmail: function(email) {
