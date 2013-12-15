@@ -8,3 +8,5 @@ autopublish
 insecure
 preserve-inputs
 email
+accounts-base
+accounts-password
