@@ -1,4 +1,7 @@
 if (Meteor.isClient) {
+  
+  Session.setDefault('done', false);  
+
   Template.email.events({
     'click #btn': function () {
       Meteor.call('sendEmail', $('#email').val());
@@ -6,9 +9,11 @@ if (Meteor.isClient) {
     }
   });
 
-  Template.email.done = function () { 
-      if (Session.get('done')) return Session.equal('done', true);
-    }
+  Template.email.done = function () { return Session.equals('done', true); }
+
+//  Template.email.done = function () { 
+ //     if (Session.get('done')) return Session.equal('done', true);
+ //   }
 
 }
 
