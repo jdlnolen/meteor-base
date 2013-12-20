@@ -1,4 +1,11 @@
 Template.register.events({
+
+    'click': function () {
+      alert("Button  clicked.");
+      Session.set("register", true);
+      console.log(Session.get("register"));
+    },
+
     'submit #register-form' : function(e, t) {
       e.preventDefault();
       var email = t.find('#account-email').value
@@ -19,3 +26,4 @@ Template.register.events({
       return false;
     }
   });
+
