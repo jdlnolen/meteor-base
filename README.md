@@ -1,5 +1,4 @@
-meteor-base
-===========
+<h1>Meteor Base</h1>  [![Build Status](https://travis-ci.org/jdlnolen/meteor-base.png)](https://travis-ci.org/jdlnolen/meteor-base)
 
 Base meteor app 
 
