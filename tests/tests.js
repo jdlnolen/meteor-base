@@ -2,6 +2,8 @@
 var assert = require('assert')
 	,foo = 'bar';
 
+var jazz = true;
+
 suite('Base', function() {
 
 	test('with .evalSync()', function(done, server, client) {
@@ -15,6 +17,8 @@ suite('Base', function() {
      		emit('return', data.a + 10);
   			}, result);
 
+      assert.equal(jazz, true);
+    
   		assert.equal(foo, 'bar');
   		done();
 	});
